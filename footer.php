@@ -17,9 +17,9 @@
             <h6>Email</h6>
             <p><a href="mailto:information@cnnssa.org">information@cnnssa.org</a></p>
         <h6>Phone</h6>
-          <p>1 (312) 207-5290</p>
+          <p><a href="tel:1-312-207-5290">1 (312) 207-5290</a></p>
         <h6>Fax</h6>
-          <p>1 (312) 441-0641</p>
+          <p><a href="tel:1-312-441-0641">1 (312) 441-0641</a></p>
         <h6>Find Us Here</h6>
           <p class="social-media">
             <a href="https://www.facebook.com/mowf/" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
