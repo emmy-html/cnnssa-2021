@@ -3843,6 +3843,106 @@ footer {
 #m4m-footer img {
   width: 100%; }
 
+/* google map location descriptions */
+.wpgmza_infowindow_title,
+.wpgmza_infowindow_address {
+  display: none;
+  width: 400px; }
+  .wpgmza_infowindow_title::-webkit-scrollbar,
+  .wpgmza_infowindow_address::-webkit-scrollbar {
+    background: #003952; }
+
+.wpgmza_infowindow_description {
+  color: #003952;
+  overflow: visible; }
+  .wpgmza_infowindow_description h3 {
+    font-size: 0.85rem;
+    line-height: 1rem;
+    padding: 0px !important;
+    text-align: left;
+    text-transform: none !important; }
+    .wpgmza_infowindow_description h3 span {
+      display: block; }
+  .wpgmza_infowindow_description p {
+    margin: 5px 0px; }
+
+.gmpInfoWindowtitle {
+  font-family: "Poppins", sans-serif; }
+
+.egm-marker-iw {
+  color: #000 !important; }
+  .egm-marker-iw p {
+    color: #000 !important;
+    margin: 0;
+    padding: 5px 0px; }
+
+/* search bar/store locator */
+div.pac-container.pac-logo {
+  /* make sure search results come up directly below input box */
+  top: 87.5px !important;
+  width: 200%; }
+
+/* style search bar */
+input.wpgmza-address {
+  border: 2px solid #003952;
+  width: 100% !important; }
+
+.wpgmza-address-container.wpgmza-form-field.wpgmza_sl_query_div {
+  width: 100%; }
+
+/* search bar container */
+.wpgmza-store-locator {
+  background: #fff;
+  color: #003952;
+  width: 100%;
+  height: 100px;
+  /* search & reset buttons */
+  /* hide labels */
+  /* hide use my location feature */ }
+  .wpgmza-store-locator button,
+  .wpgmza-store-locator input[type="button"] {
+    background: none;
+    border: none;
+    color: #003952;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    outline: none;
+    text-transform: uppercase; }
+    .wpgmza-store-locator button i,
+    .wpgmza-store-locator input[type="button"] i {
+      color: #a9cf38; }
+    .wpgmza-store-locator button:hover,
+    .wpgmza-store-locator input[type="button"]:hover {
+      cursor: pointer;
+      transition: 0.3s all; }
+  .wpgmza-store-locator .wpgmza-search,
+  .wpgmza-store-locator .wpgmza-radius,
+  .wpgmza-store-locator .wpgmza-reset {
+    margin: 0px 5px !important; }
+  .wpgmza-store-locator .wpgmza-search,
+  .wpgmza-store-locator .wpgmza-reset {
+    border-radius: 20px; }
+    .wpgmza-store-locator .wpgmza-search:hover,
+    .wpgmza-store-locator .wpgmza-reset:hover {
+      transition: 0.3s all; }
+  .wpgmza-store-locator .wpgmza-search {
+    background: #a9cf38; }
+    .wpgmza-store-locator .wpgmza-search:hover {
+      background: #00b5c2; }
+  .wpgmza-store-locator .wpgmza-reset {
+    background: #00b5c2; }
+    .wpgmza-store-locator .wpgmza-reset:hover {
+      background: #a9cf38; }
+  .wpgmza-store-locator select.wpgmza-radius {
+    border: 2px solid #003952;
+    background: white; }
+  .wpgmza-store-locator label {
+    display: none !important; }
+  .wpgmza-store-locator button.wpgmza-use-my-location {
+    display: none !important; }
+  .wpgmza-store-locator .wpgmza-radius-container {
+    margin-top: 10px !important; }
+
 /* Large Tablets & Desktop Styles */
 @media screen and (min-width: 992px) {
   /* Universal Styles */
@@ -4577,7 +4677,23 @@ footer {
     #m4m-landing-page .m4m-more-info aside:nth-of-type(1) {
       width: 75%; }
     #m4m-landing-page .m4m-more-info aside:nth-of-type(2) {
-      width: 20%; } }
+      width: 20%; }
+
+  /* google maps plugin modifications */
+  .wpgmza-store-locator {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px !important; }
+    .wpgmza-store-locator .wpgmza-radius-container {
+      margin-top: 0px !important; }
+
+  .wpgmza-address-container.wpgmza-form-field.wpgmza_sl_query_div {
+    width: 100%;
+    padding: 5px !important;
+    height: 46px !important; } }
 /* Very Large Desktop Screens */
 @media screen and (min-width: 1500px) {
   #popover .sticky.donation-popover {

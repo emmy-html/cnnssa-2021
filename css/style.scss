@@ -2194,7 +2194,7 @@ footer {
     }
   }
 }
-/* march 4 meals landing page */ 
+/* march 4 meals landing page */
 #m4m-landing-page {
   @include page-header;
   background: #fff;
@@ -2212,7 +2212,7 @@ footer {
       font-weight: bold;
       padding-top: 10px;
       span {
-        display: block
+        display: block;
       }
     }
     h3 {
@@ -2269,6 +2269,121 @@ footer {
 #m4m-footer {
   img {
     width: 100%;
+  }
+}
+/* google map location descriptions */
+.wpgmza_infowindow_title,
+.wpgmza_infowindow_address {
+  display: none;
+  width: 400px;
+  &::-webkit-scrollbar {
+    background: $dark-blue;
+  }
+}
+.wpgmza_infowindow_description {
+  color: $dark-blue;
+  overflow: visible;
+  h3 {
+    font-size: 0.85rem;
+    line-height: 1rem;
+    padding: 0px !important;
+    text-align: left;
+    text-transform: none !important;
+    span {
+      display: block;
+    }
+  }
+  p {
+    margin: 5px 0px;
+  }
+}
+.gmpInfoWindowtitle {
+  font-family: $heading-font;
+}
+.egm-marker-iw {
+  color: #000 !important;
+  p {
+    color: #000 !important;
+    margin: 0;
+    padding: 5px 0px;
+  }
+}
+/* search bar/store locator */
+div.pac-container.pac-logo {
+  /* make sure search results come up directly below input box */
+  top: 87.5px !important;
+  width: 200%;
+}
+/* style search bar */
+input.wpgmza-address {
+  border: 2px solid $dark-blue;
+  width: 100% !important;
+}
+.wpgmza-address-container.wpgmza-form-field.wpgmza_sl_query_div {
+  width: 100%;
+}
+/* search bar container */
+.wpgmza-store-locator {
+  background: #fff;
+  color: $dark-blue;
+  width: 100%;
+  height: 100px;
+  /* search & reset buttons */
+  button,
+  input[type="button"] {
+    background: none;
+    border: none;
+    color: $dark-blue;
+    font-family: $heading-font;
+    font-weight: bold;
+    outline: none;
+    text-transform: uppercase;
+    i {
+      color: $lime-green;
+    }
+    &:hover {
+      cursor: pointer;
+      transition: 0.3s all;
+    }
+  }
+  .wpgmza-search,
+  .wpgmza-radius,
+  .wpgmza-reset {
+    margin: 0px 5px !important;
+  }
+  .wpgmza-search,
+  .wpgmza-reset {
+    border-radius: 20px;
+    &:hover {
+      transition: 0.3s all;
+    }
+  }
+  .wpgmza-search {
+    background: $lime-green;
+    &:hover {
+      background: $light-blue;
+    }
+  }
+  .wpgmza-reset {
+    background: $light-blue;
+    &:hover {
+      background: $lime-green;
+    }
+  }
+  select.wpgmza-radius {
+    border: 2px solid $dark-blue;
+    background: white;
+  }
+  /* hide labels */
+  label {
+    display: none !important;
+  }
+  /* hide use my location feature */
+  button.wpgmza-use-my-location {
+    display: none !important;
+  }
+  .wpgmza-radius-container {
+    margin-top: 10px !important;
   }
 }
 /* Large Tablets & Desktop Styles */
@@ -3169,58 +3284,75 @@ footer {
       }
     }
   }
-      /* march 4 meals */ 
-      #m4m-landing-page {
-        .desktop-wrapper {
-          display: flex;
-          flex-direction: column-reverse;
-        }
-        .m4m-cta {
-          display: flex;
-          flex-flow: row nowrap;
-          align-items: center;
-          justify-content: center;
-          padding: 20px 0px;
-  
-          h2 {
-            font-size: 2.5rem;
-            line-height: 2.65rem;
-          }
-          p {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px 0px;
-            text-align: center;
-          }
-          .content-wrapper {
-            width: 35%;
-          }
-          .social-image-share {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin: 0px 10px;
-            width: 65%;
-            img {
-              width: 250px;
-            }
-          }
-        }
-        .m4m-more-info {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          aside {
-            &:nth-of-type(1) {
-              width: 75%;
-            }
-            &:nth-of-type(2) {
-              width: 20%;
-            }
-          }
+  /* march 4 meals */
+  #m4m-landing-page {
+    .desktop-wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .m4m-cta {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0px;
+
+      h2 {
+        font-size: 2.5rem;
+        line-height: 2.65rem;
+      }
+      p {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 0px;
+        text-align: center;
+      }
+      .content-wrapper {
+        width: 35%;
+      }
+      .social-image-share {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 10px;
+        width: 65%;
+        img {
+          width: 250px;
         }
       }
+    }
+    .m4m-more-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aside {
+        &:nth-of-type(1) {
+          width: 75%;
+        }
+        &:nth-of-type(2) {
+          width: 20%;
+        }
+      }
+    }
+  }
+  /* google maps plugin modifications */
+  .wpgmza-store-locator {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px !important;
+    .wpgmza-radius-container {
+      margin-top: 0px !important;
+    }
+  }
+  .wpgmza-address-container.wpgmza-form-field.wpgmza_sl_query_div {
+    width: 100%;
+    padding: 5px !important;
+    height: 46px !important;
+  }
 }
 /* Very Large Desktop Screens */
 @media screen and (min-width: 1500px) {
