@@ -1879,7 +1879,7 @@ footer {
     display: flex;
     flex-direction: column-reverse;
     .single-mow-location-page-map {
-      background: $dark-blue;
+      background: #fff;
       color: #fff;
       width: 100%;
       h1 {
@@ -1902,6 +1902,10 @@ footer {
         &:nth-of-type(1) {
           padding-top: 20px;
         }
+      }
+      h3.pick-up-time {
+        font-size: 1.25rem !important;
+        line-height: 1.2rem;
       }
       p {
         margin: 0;
@@ -2848,7 +2852,7 @@ input.wpgmza-address {
       flex-direction: row;
       align-items: flex-end;
       .volunteer-page-locations-container {
-        padding: 20px;
+        padding: 60px;
         width: 100%;
       }
     }
@@ -2911,11 +2915,11 @@ input.wpgmza-address {
       justify-content: space-around;
       .map {
         width: 55%;
-        height: 600px;
+        height: 656px;
       }
       .map-locations {
         width: 45%;
-        height: 600px;
+        height: 656px;
         overflow-y: scroll;
         overflow-x: hidden;
         .map-locations-container {
@@ -3012,6 +3016,12 @@ input.wpgmza-address {
       }
       .single-mow-location-page-meal-pickup {
         width: 30%;
+      }
+      aside.multi-pickup-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
       }
     }
   }
