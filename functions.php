@@ -240,6 +240,57 @@ function custom_post_type()
 
     // Registering your Custom Post Type
     register_post_type('c2-locations', $args);
+
+    // Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => _x('Staff', 'Post Type General Name', 'cnnssa'),
+        'singular_name'       => _x('Staff', 'Post Type Singular Name', 'cnnssa'),
+        'menu_name'           => __('Staff', 'cnnssa'),
+        'parent_item_colon'   => __('Parent Staff', 'cnnssa'),
+        'all_items'           => __('All Staff', 'cnnssa'),
+        'view_item'           => __('View Staff Member', 'cnnssa'),
+        'add_new_item'        => __('Add New Staff Member', 'cnnssa'),
+        'add_new'             => __('Add New', 'cnnssa'),
+        'edit_item'           => __('Edit Staff Member', 'cnnssa'),
+        'update_item'         => __('Update Staff Member', 'cnnssa'),
+        'search_items'        => __('Search Staff Members', 'cnnssa'),
+        'not_found'           => __('Staff Memver Not Found', 'cnnssa'),
+        'not_found_in_trash'  => __('Staff Member Not found in Trash', 'cnnssa'),
+    );
+
+    // Set other options for Custom Post Type
+
+    $args = array(
+        'label'               => __('staff-members', 'cnnssa'),
+        'description'         => __('Staff Members', 'cnnssa'),
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',),
+        // You can associate this CPT with a taxonomy or custom taxonomy. 
+        'taxonomies'          => array('genres'),
+        'taxonomies' => array('post_tag'),
+        /* A hierarchical CPT is like Pages and can have
+            * Parent and child items. A non-hierarchical CPT
+            * is like Posts.
+            */
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+        'show_in_rest' => true,
+
+    );
+
+    // Registering your Custom Post Type
+    register_post_type('staff-members', $args);
 }
 
 /* Hook into the 'init' action so that the function

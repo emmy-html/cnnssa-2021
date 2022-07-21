@@ -213,6 +213,10 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 60px;
 }
+/* temporary workaround for broken mobile map */
+.map.mobile-mow {
+  display: none;
+}
 body {
   background: $dark-blue;
   color: #fff;
@@ -766,6 +770,51 @@ footer {
   }
   .rounded-green-button {
     @include body-green-button;
+  }
+}
+/* New Board of Directors/Staff Page */
+#staff-page {
+  @include page-header;
+  /* container for staff member content */
+  .staff-page-content {
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* individual staff member */
+    .staff-member {
+      color: $dark-blue;
+      margin: 10px 0px;
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      h2 {
+        padding: 15px 0px;
+      }
+      .staff-name {
+        font-weight: bold;
+      }
+      .staff-title {
+        display: block;
+        font-weight: 300;
+        margin-top: 5px;
+      }
+    }
+  }
+  /* interest application button */
+  .staff-interest {
+    margin: 20px;
+    @include body-blue-button;
+    .button-container {
+      @include button-container;
+      span {
+        display: block;
+      }
+    }
   }
 }
 /* Resources Page */
@@ -1872,6 +1921,12 @@ footer {
 #single-mow-location-page {
   @include page-header;
   @include secondary-page-header;
+  background: $white;
+  .single-mow-location-desc {
+    background: $white;
+    color: $dark-blue;
+    padding: 10px 0px;
+  }
   h2 {
     background: $light-blue;
   }
@@ -2392,6 +2447,9 @@ input.wpgmza-address {
 }
 /* Large Tablets & Desktop Styles */
 @media screen and (min-width: 992px) {
+  .map.mobile-mow {
+    display: inline-block;
+  }
   /* Universal Styles */
   body {
     font-size: 18px;
@@ -2603,6 +2661,22 @@ input.wpgmza-address {
             width: 33%;
           }
         }
+      }
+    }
+  }
+  /* New Staff/Board of Directors Page */
+  #staff-page {
+    background: $white;
+    .staff-page-content {
+      flex-flow: row wrap;
+      padding: 20px 0px;
+      width: 80%;
+      margin: 0 auto;
+      .staff-member {
+        padding: 0px 40px;
+      }
+      .flex-break {
+        flex-basis: 100%;
       }
     }
   }

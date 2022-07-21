@@ -12,22 +12,22 @@ echo do_shortcode('[smartslider3 slider="3"]');
         </h1>
       </div>
         <div class="impact-content">
-          <article>
+        <article>
             <h2>
-              7,300
+              6,296
               <span>Older Americans <span>Served</span></span>
             </h2>
           </article>
           <article>
             <h2>
-              73,000
+              49,225
               <span>Hours Volunteered</span>
             </h2>
           </article>
           <article>
             <h2>
-              830,000
-              <span>Emergency Meals Delivered</span>
+              930,829
+              <span>Meals Served</span>
             </h2>
           </article>
         </div>

@@ -5,6 +5,9 @@
 <section id="single-mow-location-page">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <h1><?php the_title()?></h1>
+    <?php if (get_field('single_location_desc')) : ?>
+        <p class="single-mow-location-desc content-wrapper"><?php the_field('single_location_desc'); ?></p>
+    <?php endif; ?>
     <div class="single-mow-location-page-content">
         <article class="single-mow-location-page-map">
         <?php if( get_field('map') ): ?>
@@ -43,6 +46,18 @@
                                 <?php if (get_field('secondary_meal_type_service_days')) : ?>
                                     <p><?php the_field('secondary_meal_type_service_days'); ?></p>
                                 <?php endif; ?>
+                            </div>
+                            <div>
+                                <?php if (get_field('tertiary_meal_type')) : ?>
+                                <h3 class="pick-up-time"><?php the_field('tertiary_meal_type'); ?></h3>
+                                <?php endif; ?>
+                                <?php if (get_field('tertiary_meal_times')) : ?>
+                                <p><?php the_field('tertiary_meal_times'); ?></p>
+                                <?php endif; ?>
+                                <?php if (get_field('tertiary_meal_days')) : ?>
+                                <p><?php the_field('tertiary_meal_days'); ?></p>
+                                <?php endif; ?>
+                                </h3>
                             </div>
                         </aside>
             <?php if( get_field('manager_select') ): ?>

@@ -1051,6 +1051,10 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 60px; }
 
+/* temporary workaround for broken mobile map */
+.map.mobile-mow {
+  display: none; }
+
 body {
   background: #003952;
   color: #fff;
@@ -1640,6 +1644,70 @@ footer {
     #board-of-directors-page .rounded-green-button:hover {
       background: #00b5c2;
       transition: 1s background; }
+
+/* New Board of Directors/Staff Page */
+#staff-page {
+  /* container for staff member content */
+  /* interest application button */ }
+  #staff-page h1 {
+    background: #a9cf38;
+    color: #003952;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 10px 0px;
+    margin: 0 auto;
+    width: 100%; }
+    #staff-page h1 span {
+      color: #003952; }
+  #staff-page .staff-page-content {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* individual staff member */ }
+    #staff-page .staff-page-content .staff-member {
+      color: #003952;
+      margin: 10px 0px; }
+      #staff-page .staff-page-content .staff-member img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px; }
+      #staff-page .staff-page-content .staff-member h2 {
+        padding: 15px 0px; }
+      #staff-page .staff-page-content .staff-member .staff-name {
+        font-weight: bold; }
+      #staff-page .staff-page-content .staff-member .staff-title {
+        display: block;
+        font-weight: 300;
+        margin-top: 5px; }
+  #staff-page .staff-interest {
+    margin: 20px;
+    background: #00b5c2;
+    border-radius: 5px;
+    padding: 5px 15px; }
+    #staff-page .staff-interest:hover {
+      background: #a9cf38;
+      transition: 1s background; }
+    #staff-page .staff-interest .button-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center; }
+      #staff-page .staff-interest .button-container a:link,
+      #staff-page .staff-interest .button-container a:visited {
+        border-bottom: none;
+        color: #003952;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase; }
+        #staff-page .staff-interest .button-container a:link:hover,
+        #staff-page .staff-interest .button-container a:visited:hover {
+          border-bottom: none; }
+      #staff-page .staff-interest .button-container span {
+        display: block; }
 
 /* Resources Page */
 #resources-page {
@@ -3387,58 +3455,64 @@ footer {
         transition: 1s background; }
 
 /* Single MOW Location/Township Page */
-#single-mow-location-page h1 {
-  background: #a9cf38;
-  color: #003952;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  padding: 10px 0px;
-  margin: 0 auto;
-  width: 100%; }
-  #single-mow-location-page h1 span {
-    color: #003952; }
-#single-mow-location-page h2 {
-  color: #003952;
-  font-weight: 700;
-  font-size: 1.3rem;
-  line-height: 1.3rem;
-  padding: 15px 0px; }
-  #single-mow-location-page h2 span {
-    display: block; }
-@media screen and (min-width: 992px) {
-  #single-mow-location-page h2 span {
-    display: inline-block; } }
-#single-mow-location-page h2 {
-  background: #00b5c2; }
-#single-mow-location-page .single-mow-location-page-content {
-  display: flex;
-  flex-direction: column-reverse; }
-  #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-map {
-    background: #fff;
-    color: #fff;
-    width: 100%; }
-    #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-map h1 {
-      background: #003952;
-      color: #fff; }
-  #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-meal-pickup {
-    background: #fff;
+#single-mow-location-page {
+  background: #ffffff; }
+  #single-mow-location-page h1 {
+    background: #a9cf38;
     color: #003952;
-    width: 100%;
-    padding-bottom: 25px; }
-    #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-meal-pickup h2 {
-      font-size: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 10px 0px;
+    margin: 0 auto;
+    width: 100%; }
+    #single-mow-location-page h1 span {
+      color: #003952; }
+  #single-mow-location-page h2 {
+    color: #003952;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    padding: 15px 0px; }
+    #single-mow-location-page h2 span {
+      display: block; }
+  @media screen and (min-width: 992px) {
+    #single-mow-location-page h2 span {
+      display: inline-block; } }
+  #single-mow-location-page .single-mow-location-desc {
+    background: #ffffff;
+    color: #003952;
+    padding: 10px 0px; }
+  #single-mow-location-page h2 {
+    background: #00b5c2; }
+  #single-mow-location-page .single-mow-location-page-content {
+    display: flex;
+    flex-direction: column-reverse; }
+    #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-map {
+      background: #fff;
+      color: #fff;
       width: 100%; }
-    #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-meal-pickup h3 {
-      padding: 5px 20px;
-      text-align: left; }
-      #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-meal-pickup h3:nth-of-type(1) {
-        padding-top: 20px; }
-    #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-meal-pickup h3.pick-up-time {
-      font-size: 1.25rem !important;
-      line-height: 1.2rem; }
-    #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-meal-pickup p {
-      margin: 0;
-      padding: 0px 20px; }
+      #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-map h1 {
+        background: #003952;
+        color: #fff; }
+    #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-meal-pickup {
+      background: #fff;
+      color: #003952;
+      width: 100%;
+      padding-bottom: 25px; }
+      #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-meal-pickup h2 {
+        font-size: 2rem;
+        width: 100%; }
+      #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-meal-pickup h3 {
+        padding: 5px 20px;
+        text-align: left; }
+        #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-meal-pickup h3:nth-of-type(1) {
+          padding-top: 20px; }
+      #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-meal-pickup h3.pick-up-time {
+        font-size: 1.25rem !important;
+        line-height: 1.2rem; }
+      #single-mow-location-page .single-mow-location-page-content .single-mow-location-page-meal-pickup p {
+        margin: 0;
+        padding: 0px 20px; }
 
 /* Single MOW Location Page Additional Info */
 #single-mow-location-page-additional-info .single-mow-location-page-additional-info-container {
@@ -3948,6 +4022,9 @@ input.wpgmza-address {
 
 /* Large Tablets & Desktop Styles */
 @media screen and (min-width: 992px) {
+  .map.mobile-mow {
+    display: inline-block; }
+
   /* Universal Styles */
   body {
     font-size: 18px;
@@ -4116,6 +4193,19 @@ input.wpgmza-address {
         align-items: center; }
         #board-of-directors-page .board-of-directors-container .board-of-directors-content .content-wrapper article {
           width: 33%; }
+
+  /* New Staff/Board of Directors Page */
+  #staff-page {
+    background: #ffffff; }
+    #staff-page .staff-page-content {
+      flex-flow: row wrap;
+      padding: 20px 0px;
+      width: 80%;
+      margin: 0 auto; }
+      #staff-page .staff-page-content .staff-member {
+        padding: 0px 40px; }
+      #staff-page .staff-page-content .flex-break {
+        flex-basis: 100%; }
 
   /* Resources Page */
   #resources-page .resources-page-content .content-wrapper {

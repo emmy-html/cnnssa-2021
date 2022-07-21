@@ -50,16 +50,36 @@
                     </p>
                     </div>
                     <div>
-                    <?php if( get_field('location_type') ): ?>
+                        <?php if (get_field('location_type')) : ?>
                         <h3 class="pick-up-time"><?php the_field('location_type'); ?>
-                    <?php endif; ?> 
-                    <?php if( get_field('location_times') ): ?>
+                        <?php endif; ?>
+                        <?php if (get_field('location_times')) : ?>
                         <span><?php the_field('location_times'); ?></span>
-                    <?php endif; ?> 
-                    <?php if( get_field('location_days') ): ?>
+                        <?php endif; ?>
+                        <?php if (get_field('location_days')) : ?>
                         <span><?php the_field('location_days'); ?></span>
-                    <?php endif; ?> 
-                    </h3>
+                        <?php endif; ?>
+                        </h3>
+                        <?php if (get_field('secondary_meal_type')) : ?>
+                        <h3 class="pick-up-time"><?php the_field('secondary_meal_type'); ?>
+                        <?php endif; ?>
+                        <?php if (get_field('secondary_meal_times')) : ?>
+                        <span><?php the_field('secondary_meal_times'); ?></span>
+                        <?php endif; ?>
+                        <?php if (get_field('secondary_meal_days')) : ?>
+                        <span><?php the_field('secondary_meal_days'); ?></span>
+                        <?php endif; ?>
+                        </h3>
+                        <?php if (get_field('tertiary_meal_type')) : ?>
+                        <h3 class="pick-up-time"><?php the_field('tertiary_meal_type'); ?>
+                        <?php endif; ?>
+                        <?php if (get_field('tertiary_meal_times')) : ?>
+                        <span><?php the_field('tertiary_meal_times'); ?></span>
+                        <?php endif; ?>
+                        <?php if (get_field('tertiary_meal_days')) : ?>
+                        <span><?php the_field('tertiary_meal_days'); ?></span>
+                        <?php endif; ?>
+                        </h3>
                     </div>
                     <div>
                         <?php if( get_field('manager_select') ): ?>
